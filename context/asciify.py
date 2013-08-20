@@ -6,13 +6,17 @@ class AsciifyCommand(sublime_plugin.TextCommand):
 
         print ("Asciifying: " + myFile)
 
-        os.system("node asciify.js " + myFile)
+        myFile = myFile.replace("\\", "\\\\")
+
+        os.system("node asciify.js \"" + myFile + "\"")
 
 
 class DeasciifyCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         myFile = self.view.file_name()
 
-        print ("Asciifying: " + myFile)
+        print ("DeAsciifying: " + myFile)
 
-        os.system("node deasciify.js " + myFile)
+        myFile = myFile.replace("\\", "\\\\")
+
+        os.system("node deasciify.js \"" + myFile + "\"")
