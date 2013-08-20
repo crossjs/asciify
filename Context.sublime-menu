@@ -1,0 +1,5 @@
+[
+    { "caption": "-", "id": "asciify" },
+    { "command": "asciify", "caption": "Asciify" },
+    { "command": "deasciify", "caption": "DeAsciify" }
+]

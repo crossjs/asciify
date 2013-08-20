@@ -1,5 +1,0 @@
-{
-    "cmd": ["/usr/local/bin/node", "/Users/crossjs/code/asciify/deasciify.js", "$file"],
-    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-    "selector": "source.javascript"
-}

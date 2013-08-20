@@ -1,4 +1,0 @@
-[
-    { "command": "asciify", "caption": "Asciify" },
-    { "command": "deasciify", "caption": "DeAsciify" },
-]
