@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, os
+import sublime, sublime_plugin, os, sys
 
 class AsciifyCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -7,8 +7,10 @@ class AsciifyCommand(sublime_plugin.TextCommand):
         pkgDir = os.path.join(sublime.packages_path(), 'Asciify')
 
         # myFile = myFile.replace("\\", "\\\\")
-
-        cmdStr = 'node "' + pkgDir + '\\asciify.js" "' + myFile + '"'
+        if sys.platform.startswith('win'):
+            cmdStr = 'node "' + pkgDir + '\\asciify.js" "' + myFile + '"'
+        else:
+            cmdStr = 'node "' + pkgDir + '/asciify.js" "' + myFile + '"'
 
         print (cmdStr)
 
@@ -22,8 +24,10 @@ class DeasciifyCommand(sublime_plugin.TextCommand):
         pkgDir = os.path.join(sublime.packages_path(), 'Asciify')
 
         # myFile = myFile.replace("\\", "\\\\")
-
-        cmdStr = 'node "' + pkgDir + '\\deasciify.js" "' + myFile + '"'
+        if sys.platform.startswith('win'):
+            cmdStr = 'node "' + pkgDir + '\\deasciify.js" "' + myFile + '"'
+        else:
+            cmdStr = 'node "' + pkgDir + '/deasciify.js" "' + myFile + '"'
 
         print (cmdStr)
 
