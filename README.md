@@ -1,8 +1,8 @@
 asciify
 =======
 
-transport none-ascii char to ascii in js and css
+transport non-ascii chars to ascii in js and css
 
-- plugin for ST3(sublime text 3)
+- package for ST3(sublime text 3)
 - need nodeJS
 - copy to packages/Asciify
