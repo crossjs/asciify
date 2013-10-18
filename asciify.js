@@ -27,7 +27,7 @@ function enAsc (s, u) {
 function asciify (f, d) {
     var
         // css file (end with '.css'), without 'u'
-        u = /\.css$/.test(f) ? '' : 'u',
+        u = /\.css$/i.test(f) ? '' : 'u',
 
         d = d.replace(/[^\x00-\x7f]/g, function (s) {
             return enAsc(s, u);

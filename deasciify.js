@@ -11,7 +11,7 @@ if (av[1] === av[2])
 function deasciify (f, d) {
     var
         // css file (end with '.css'), without 'u'
-        r = /\.css$/.test(f) ? /\\([0-9a-f]{4})/ig : /\\u([0-9a-f]{4})/ig,
+        r = /\.css$/i.test(f) ? /\\([0-9a-f]{4})/ig : /\\u([0-9a-f]{4})/ig,
 
         d = d.replace(r, function (a, s) {
             return String.fromCharCode('0x' + s);
