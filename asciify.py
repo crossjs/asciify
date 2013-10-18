@@ -8,13 +8,13 @@ class AsciifyCommand(sublime_plugin.TextCommand):
 
         # myFile = myFile.replace("\\", "\\\\")
         if sys.platform.startswith('win'):
-            cmdStr = 'node "' + pkgDir + '\\asciify.js" "' + myFile + '"'
+            cmdStr = 'start "" "' + pkgDir + '\\node.exe" "' + pkgDir + '\\asciify.js" "' + myFile + '"'
         else:
             cmdStr = 'node "' + pkgDir + '/asciify.js" "' + myFile + '"'
 
         print (cmdStr)
 
-        os.system(cmdStr)
+        os.popen(cmdStr)
 
 
 class DeasciifyCommand(sublime_plugin.TextCommand):
@@ -25,10 +25,10 @@ class DeasciifyCommand(sublime_plugin.TextCommand):
 
         # myFile = myFile.replace("\\", "\\\\")
         if sys.platform.startswith('win'):
-            cmdStr = 'node "' + pkgDir + '\\deasciify.js" "' + myFile + '"'
+            cmdStr = 'start "" "' + pkgDir + '\\node.exe" "' + pkgDir + '\\deasciify.js" "' + myFile + '"'
         else:
             cmdStr = 'node "' + pkgDir + '/deasciify.js" "' + myFile + '"'
 
         print (cmdStr)
 
-        os.system(cmdStr)
+        os.popen(cmdStr)
